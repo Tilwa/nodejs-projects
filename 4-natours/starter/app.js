@@ -5,6 +5,10 @@ const app = express();
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Hello from server side", app: "Natours" });
 });
+app.get("/home", (req, res) => {
+  res.status(200).json({ message: "Hello from Home page", app: "Natours" });
+});
+
 app.post("/test", (req, res) => {
   res.status(200).send("We can post data from this end point");
 });
